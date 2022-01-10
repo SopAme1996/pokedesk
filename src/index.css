@@ -1,0 +1,227 @@
+body {
+  font-size: 18px;
+  line-height: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.pokemonDesk {
+  margin-left: 64px;
+  padding: 15px 20px 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../public/img/pokemon.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sidenav---sidenav---_2tBP {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f90;
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+.text-name {
+  font-size: 16px;
+}
+
+.title {
+  color: white;
+}
+
+.icon-pokemon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-info {
+  box-shadow: 0px 10px 10px -6px black;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 500px;
+  border-radius: 50px;
+  background-color: white;
+}
+
+.container-info .img-pokemon {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  max-height: 150px;
+  background-color: #87ceeb;
+}
+
+.container-info .img-pokemon div {
+  position: absolute;
+  top: 20%;
+  padding: 15px;
+  border-radius: 100px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-info .img-pokemon img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.container-info .name-pokemon {
+  height: 100%;
+  max-height: 200px;
+  border-bottom: 1px solid rgba(202, 202, 202, 0.596);
+}
+
+.container-name {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-name .name {
+  text-transform: capitalize;
+  letter-spacing: 4px;
+}
+
+.container-name p {
+  margin-top: 100px;
+}
+
+.hp {
+  color: rgb(156, 156, 156);
+  text-transform: capitalize;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.xp {
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(156, 156, 156);
+  text-transform: capitalize;
+  margin-top: -10px;
+}
+
+.info-pokemon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.info-pokemon div .type {
+  margin: 0px;
+  color: rgb(156, 156, 156);
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.info-pokemon div .nivel {
+  margin-bottom: 0px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+@keyframes lds-grid {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
