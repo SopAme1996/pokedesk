@@ -2,6 +2,7 @@
 const initialState = {
     data: [],
     pokemon_Selected: [],
+    loadin: false,
 }
 export const pokemonReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -14,6 +15,11 @@ export const pokemonReducer = (state = initialState, action) => {
             return {
                 ...state,
                 pokemon_Selected: action.payload,
+            }
+        case 'SET_LOADING':
+            return {
+                ...state,
+                loadin: action.payload,
             }
 
         default:

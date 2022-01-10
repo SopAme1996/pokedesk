@@ -1,4 +1,4 @@
-import { put, takeEvery, all, call } from 'redux-saga/effects';
+import { put, all, call, takeLatest } from 'redux-saga/effects';
 import { pokemonApi } from '../helpers/pokemonData';
 
 function* requestPokemonsData({ payload }) {
@@ -10,19 +10,24 @@ function* requestPokemonsData({ payload }) {
 }
 
 function* requestPokemonData({ payload }) {
-    const pokemon = yield call(pokemonApi, payload);
+    const { action, url } = payload;
+    const pokemon = yield call(pokemonApi, url);
     yield put({
-        type: 'SET_POKEMON_SELECTED',
+        type: action,
         payload: pokemon
-    })
+    });
+    yield put({
+        type: 'SET_LOADING',
+        payload: false,
+    });
 }
 
 function* watchPokemonsAsync() {
-    yield takeEvery('SET_REQUEST_DATA', requestPokemonsData)
+    yield takeLatest('SET_REQUEST_DATA', requestPokemonsData)
 }
 
 function* watchPokemonAsync() {
-    yield takeEvery('SET_REQUEST_POKEMON', requestPokemonData)
+    yield takeLatest('SET_REQUEST_POKEMON', requestPokemonData)
 }
 
 // notice how we now only export the rootSaga

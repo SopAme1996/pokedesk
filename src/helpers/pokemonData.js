@@ -2,7 +2,7 @@
 export const pokemonApi = async (rutaApi) => {
     let url = '';
     if (rutaApi === 'pokemon') {
-        url = `https://pokeapi.co/api/v2/${rutaApi}`;
+        url = `https://pokeapi.co/api/v2/${rutaApi}?limit=100`;
     } else {
         url = rutaApi;
     }
