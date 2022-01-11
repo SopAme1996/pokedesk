@@ -9,7 +9,7 @@ export const Pokemon = () => {
     if (pokemon.length === 0) {
         return (
             <div className='pokemonDesk'>
-                <h1>Select your pokemon</h1>
+                <h3 >Select your pokemon</h3>
             </div>
         )
     }
