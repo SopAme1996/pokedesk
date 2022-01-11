@@ -41,10 +41,8 @@ export const ListPokemons = () => {
                         return (
                             <NavItem eventKey={data.url} key={key}>
                                 <NavIcon>
-                                    https://github.com/SopAme1996/pokedesk/tree/main/public/img/pokemon
-                                    {/* <img className='icon-pokemon' src={`../../img/pokemon/${data.url.split('/')[6]
-                                        }.png`} alt={data.name} /> */}
-                                    <img className='icon-pokemon' src='https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/1.png' alt={data.name} />
+                                    <img className='icon-pokemon' src={`../../img/pokemon/${data.url.split('/')[6]
+                                        }.png`} alt={data.name} />
 
 
                                 </NavIcon>
