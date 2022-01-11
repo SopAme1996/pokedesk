@@ -43,8 +43,6 @@ export const ListPokemons = () => {
                                 <NavIcon>
                                     <img className='icon-pokemon' src={`../../img/pokemon/${data.url.split('/')[6]
                                         }.png`} alt={data.name} />
-
-
                                 </NavIcon>
                                 <NavText>
                                     <p className='text-name'>{data.name}</p>
